@@ -1,12 +1,12 @@
 # Tasker Ranking System 🚀
 
-##  Problem
+## 📌 Problem
 Ranking taskers effectively is challenging because multiple objectives must be balanced, including user conversion (booking), revenue, and fairness for new taskers. A naive approach may favor only highly rated or experienced taskers, limiting marketplace growth.
 
-##  Approach
+## ⚙️ Approach
 We designed a ranking system combining feature engineering and machine learning. A baseline heuristic model (based on rating, distance, and experience) is compared against an ML-based ranking model. Multi-objective scoring is applied to balance performance and fairness.
 
-##  Model
+## 🤖 Model
 We use a LightGBM ranking model (LambdaMART) trained on features such as:
 - Rating
 - Price
@@ -15,16 +15,15 @@ We use a LightGBM ranking model (LambdaMART) trained on features such as:
 
 The model learns to rank taskers based on their likelihood of being selected.
 
-##  Metrics
+## 📊 Metrics
 We evaluate the system using:
 
-- **NDCG@K**: Measures ranking quality by prioritizing highly relevant taskers at the top.
+- **NDCG@K**: Measures ranking quality by prioritizing relevant taskers at the top.
 - **CTR (Click-Through Rate)**: Measures user engagement.
 - **Revenue**: Evaluates business impact.
 
-## API Usage
-The model is deployed using FastAPI.
+## 🚀 How to Run
 
-Run the API:
 ```bash
+pip install -r requirements.txt
 uvicorn app:app --reload
